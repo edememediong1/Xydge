@@ -17,7 +17,7 @@ const SolarSystemBackground = () => {
   const planets = [
     { radius: '300px', duration: '40s', color: 'bg-blue-500/10', blur: 'blur-[60px]', size: 'w-32 h-32' },
     { radius: '500px', duration: '65s', color: 'bg-indigo-500/5', blur: 'blur-[80px]', size: 'w-48 h-48' },
-    { radius: '750px', duration: '90s', color: 'bg-purple-500/5', blur: 'blur-[100px]', size: 'w-64 h-64' },
+    { radius: '750px', duration: '90s', color: 'bg-purple-500/5', blur: 'blur-[70px]', size: 'w-64 h-64' },
     { radius: '200px', duration: '30s', color: 'bg-cyan-500/10', blur: 'blur-[40px]', size: 'w-24 h-24' },
   ];
 
@@ -207,19 +207,11 @@ const Hero: React.FC<HeroProps> = ({ onNavigateAcademy }) => {
         </div>
 
         {/* Massive Collection of Floating Chips */}
-        <FloatingChip text="Web Dev" color="purple" className="top-[-5%] left-[5%]" animationClass="animate-float" />
-        <FloatingChip text="Mobile" color="rose" className="top-10 left-[15%]" animationClass="animate-float-delayed" />
-        <FloatingChip text="AI/ML" color="cyan" className="top-[5%] right-[10%]" animationClass="animate-float-slow" />
-        <FloatingChip text="Data Sci" color="amber" className="top-32 right-[2%]" animationClass="animate-float" />
-        <FloatingChip text="Cloud Ops" color="indigo" className="top-[-80px] left-[45%]" animationClass="animate-float-slow" />
-        <FloatingChip text="UI/UX" color="emerald" className="top-[25%] right-[22%]" animationClass="animate-float-delayed" />
-        <FloatingChip text="Scalable" color="blue" className="top-[20%] left-[28%]" animationClass="animate-float-slow" />
-        
-        <FloatingChip text="Cyber" color="rose" className="bottom-[35%] left-[5%]" animationClass="animate-float-delayed" />
-        <FloatingChip text="Fintech" color="blue" className="bottom-[25%] left-[20%]" animationClass="animate-float" />
-        <FloatingChip text="Fullstack" color="emerald" className="bottom-[30%] right-[10%]" animationClass="animate-float-slow" />
-        <FloatingChip text="SaaS" color="purple" className="bottom-[15%] right-[25%]" animationClass="animate-float-delayed" />
-        <FloatingChip text="Web3" color="indigo" className="bottom-[45%] right-[35%]" animationClass="animate-float" />
+        <FloatingChip text="Web Dev" color="purple" className="top-[-3%] left-[3%]" animationClass="animate-float" />
+        <FloatingChip text="Mobile" color="rose" className="top-10 left-[10%]" animationClass="animate-float-delayed" />
+        <FloatingChip text="AI/ML" color="cyan" className="top-[3%] right-[8%]" animationClass="animate-float-slow" />
+        <FloatingChip text="Cloud Ops" color="indigo" className="top-[-70px] left-[50%]" animationClass="animate-float-slow" />
+
 
         {/* Video Preview Frame */}
         <div 
