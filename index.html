@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xydge - Building World-Class Software</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Sora', sans-serif;
+        background-color: #030712;
+        color: #f3f4f6;
+        overflow-x: hidden;
+      }
+      .glow-mesh {
+        background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) translateX(0px); }
+        33% { transform: translateY(-15px) translateX(10px); }
+        66% { transform: translateY(10px) translateX(-5px); }
+      }
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.2; transform: scale(0.8); }
+        50% { opacity: 0.8; transform: scale(1.2); }
+      }
+      @keyframes carousel-left {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      @keyframes carousel-right {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0); }
+      }
+      @keyframes line-flow {
+        0% { transform: translateX(-100%); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { transform: translateX(100%); opacity: 0; }
+      }
+      @keyframes line-flow-vertical {
+        0% { transform: translateY(-100%); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { transform: translateY(100%); opacity: 0; }
+      }
+      @keyframes draw-path {
+        0% { stroke-dashoffset: 1500; opacity: 0; }
+        15% { opacity: 0.4; }
+        85% { opacity: 0.4; }
+        100% { stroke-dashoffset: 0; opacity: 0; }
+      }
+      @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes orbit {
+        from { transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg); }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      .animate-float-slow {
+        animation: float 10s ease-in-out infinite;
+      }
+      .animate-float-delayed {
+        animation: float 8s ease-in-out infinite 1.5s;
+      }
+      .animate-carousel-left {
+        animation: carousel-left 40s linear infinite;
+      }
+      .animate-carousel-right {
+        animation: carousel-right 40s linear infinite;
+      }
+      .animate-line-flow {
+        animation: line-flow 8s linear infinite;
+      }
+      .animate-line-flow-slow {
+        animation: line-flow 12s linear infinite;
+      }
+      .animate-line-flow-vertical {
+        animation: line-flow-vertical 10s linear infinite;
+      }
+      .animate-draw {
+        stroke-dasharray: 1500;
+        animation: draw-path 10s linear infinite;
+      }
+      .animate-spin-slow {
+        animation: spin-slow 120s linear infinite;
+      }
+      .animate-spin-reverse-slow {
+        animation: spin-slow 180s linear infinite reverse;
+      }
+      .orbiting-body {
+        animation: orbit var(--orbit-duration) linear infinite;
+      }
+      .star {
+        position: absolute;
+        background: white;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: twinkle var(--duration) ease-in-out infinite;
+      }
+      .galaxy-center {
+        background: radial-gradient(circle at center, rgba(37, 99, 235, 0.15) 0%, rgba(79, 70, 229, 0.1) 30%, rgba(139, 92, 246, 0.05) 50%, transparent 80%);
+        filter: blur(80px);
+      }
+      .marquee-mask {
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      }
+      .cursor-blink {
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink {
+        from, to { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
