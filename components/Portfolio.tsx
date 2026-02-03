@@ -3,10 +3,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { ArrowUpRight, ShieldCheck, Zap, Maximize, Palette, Globe, Layers, Activity, Smartphone, ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
 const cases = [
-  { id: 'kulture-market', title: 'Kulture Market', sector: 'E-commerce', desc: 'A global multi-vendor platform connecting local artisans to worldwide markets with automated logistics and FX settlement.', img: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=1200' },
-  { id: 'pulse-health', title: 'Pulse Health', sector: 'Healthcare', desc: 'AI-driven patient monitoring system providing real-time telemetry and predictive alerts for critical care units.', img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1200' },
-  { id: 'paylynx', title: 'PayLynx', sector: 'Fintech', desc: 'Enterprise-grade cross-border payment gateway handling thousands of transactions per second with zero latency.', img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200' },
-  { id: 'edunode', title: 'EduNode', sector: 'Edtech', desc: 'Decentralized learning ecosystem with interactive real-time classrooms and blockchain-verified credentialing.', img: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=1200' },
+  { id: 'kulture-market', title: 'Kulture Market', sector: 'E-commerce', desc: 'A global multi-vendor platform connecting local artisans to worldwide markets with automated logistics and FX settlement.', img:'../components/assets/component1.png' },
 ];
 
 const sectors = [
@@ -91,19 +88,19 @@ const Portfolio: React.FC<{ onSelectCase: (id: string) => void }> = ({ onSelectC
   return (
     <div className="pt-40 pb-20 relative bg-[#030712]">
       {/* Portfolio Minimalist Hero */}
-      <section className="px-6 mb-32 max-w-7xl mx-auto text-center relative z-10 min-h-[60vh] flex flex-col items-center justify-center">
+      <section className="px-6 mb-32 mx-auto text-center relative z-10 min-h-[60vh] flex flex-col items-center justify-center">
         <StarField />
         <SVGFlowLines />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] galaxy-center pointer-events-none -z-10 opacity-40"></div>
         
         <div className="relative z-20 space-y-12">
           <div className="inline-block">
-            <span className="text-[10px] font-black tracking-[0.5em] text-blue-500 uppercase px-6 py-2 rounded-full border border-blue-500/20 bg-blue-500/5 backdrop-blur-sm">
+            <span className="text-[6px] font-black tracking-[0.5em] text-blue-500 uppercase px-6 py-2 rounded-full border border-blue-500/20 bg-blue-500/5 backdrop-blur-sm">
               Portfolio & Impact
             </span>
           </div>
           
-          <h1 className="text-6xl md:text-[10rem] font-extrabold tracking-tighter leading-[0.85] text-white">
+          <h1 className="text-4xl md:text-[10rem] font-extrabold tracking-tighter leading-[0.85] text-white">
             Digital <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/20">Masterpieces</span>
           </h1>
@@ -188,16 +185,16 @@ const Portfolio: React.FC<{ onSelectCase: (id: string) => void }> = ({ onSelectC
         <div className="flex w-[200%] animate-carousel-left marquee-mask">
           <div className="flex">
             {clientReviews.concat(clientReviews).map((r, i) => (
-              <div key={i} className="glass-card p-12 rounded-[3.5rem] border-white/5 w-[500px] mx-6 flex-shrink-0 flex flex-col justify-between hover:border-blue-500/20 transition-all">
+              <div key={i} className="glass-card p-8 md:p-12 rounded-[3.5rem] border-white/5 w-[300px] mx-6 flex-shrink-0 flex flex-col justify-between hover:border-blue-500/20 transition-all">
                 <div>
                   <div className="flex mb-6">{[...Array(5)].map((_, j) => <Star key={j} size={14} className="text-amber-400 fill-amber-400 mr-1" />)}</div>
-                  <p className="text-gray-200 italic mb-10 font-light text-xl leading-relaxed">"{r.text}"</p>
+                  <p className="text-gray-200 italic mb-10 font-light text-lg md:text-xl leading-relaxed">"{r.text}"</p>
                 </div>
                 <div className="flex items-center space-x-5">
                   <img src={r.img} className="w-14 h-14 rounded-full border-2 border-blue-500/20 object-cover" alt={r.name} />
                   <div>
-                    <h4 className="font-bold text-white text-lg">{r.name}</h4>
-                    <p className="text-[10px] text-gray-500 uppercase font-black tracking-[0.2em]">{r.role}</p>
+                    <h4 className="font-bold text-white text-md text-base md:text-lg">{r.name}</h4>
+                    <p className="text-[8px] md:text-[10px] text-gray-500 uppercase font-black tracking-[0.2em]">{r.role}</p>
                   </div>
                 </div>
               </div>

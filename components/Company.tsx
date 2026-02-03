@@ -49,7 +49,7 @@ const Company: React.FC = () => {
       {/* 2. Mission and Vision */}
       <section className="py-24 px-6 relative bg-white/[0.01]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="glass-card p-12 rounded-[3.5rem] border-white/5 relative overflow-hidden group hover:border-blue-500/20 transition-all">
+          <div className="glass-card p-12 rounded-[1rem] border-white/5 relative overflow-hidden group hover:border-blue-500/20 transition-all">
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/5 blur-[60px] -z-10 group-hover:bg-blue-500/10 transition-colors"></div>
             <div className="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-8 group-hover:scale-110 transition-transform">
               <Target size={32} />
@@ -59,7 +59,7 @@ const Company: React.FC = () => {
               To empower innovators and enterprises by delivering high-performance software solutions that drive growth, efficiency, and market leadership in an increasingly digital world.
             </p>
           </div>
-          <div className="glass-card p-12 rounded-[3.5rem] border-white/5 relative overflow-hidden group hover:border-purple-500/20 transition-all">
+          <div className="glass-card p-12 rounded-[1rem] border-white/5 relative overflow-hidden group hover:border-purple-500/20 transition-all">
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-500/5 blur-[60px] -z-10 group-hover:bg-purple-500/10 transition-colors"></div>
             <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-8 group-hover:scale-110 transition-transform">
               <Eye size={32} />
@@ -75,11 +75,16 @@ const Company: React.FC = () => {
       {/* 3. Partners */}
       <section className="py-24 px-6 border-y border-white/5">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-center text-sm font-black text-gray-500 uppercase tracking-[0.4em] mb-16">Ecosystem Partners</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-            {['React', 'AWS', 'Google Cloud', 'Microsoft', 'Stripe', 'Docker', 'Tailwind', 'Next.js'].map((partner, i) => (
-              <span key={i} className="text-3xl font-bold tracking-tighter text-white">{partner}</span>
-            ))}
+          <p className="text-4xl md:text-6xl font-extrabold tracking-tight">Ecosystem Partners</p>
+          <p className="text-gray-400 mt-6 text-xl mb-12">We work with infrastructure and services by leading technology providers to deliver world-class software solutions.</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" className="h-10 md:h-12 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer" />
+            <img src="https://cdn.worldvectorlogo.com/logos/stripe-4.svg" alt="Stripe" className="h-8 md:h-10 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer" />
+            <img src="https://cdn.worldvectorlogo.com/logos/paystack-2.svg" alt="Paystack" className="h-8 md:h-10 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer" />
+            <img src="https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg" alt="Google Cloud" className="h-8 md:h-10 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer" />
+            <img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS" className="h-8 md:h-10 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer" />
+            <img src="https://cdn.worldvectorlogo.com/logos/docker-4.svg" alt="Docker" className="h-10 md:h-12 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer" />
+            <img src="https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" alt="Tailwind CSS" className="h-6 md:h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer" />
           </div>
         </div>
       </section>
@@ -89,27 +94,20 @@ const Company: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight">Accreditations</h2>
-            <p className="text-gray-400 mt-6 text-xl font-light">Industry-recognized licenses that guarantee world-class quality.</p>
+            <p className="text-gray-400 mt-6 text-xl font-light">Our team members hold industry-recognized licenses and certifications that guarantee world-class quality.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: "ISO 27001 Certified", desc: "Global standard for information security management systems.", icon: <ShieldCheck className="text-emerald-400" /> },
-              { title: "AWS Select Partner", desc: "Recognized proficiency in cloud architecture and deployment.", icon: <Globe className="text-blue-400" /> },
-              { title: "Member of BCS", desc: "Chartered Institute for IT professional membership and ethics.", icon: <Award className="text-amber-400" /> }
-            ].map((license, i) => (
-              <div key={i} className="glass-card p-10 rounded-[3rem] border-white/5 text-center group">
-                <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  {license.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-4">{license.title}</h3>
-                <p className="text-gray-500 font-light text-sm leading-relaxed">{license.desc}</p>
-              </div>
-            ))}
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+            <img src="https://images.credly.com/size/340x340/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png" alt="AWS Certified AI Practitioner" className="h-24 md:h-32 opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer" />
+            <img src="https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" alt="AWS Certified Cloud Practitioner" className="h-24 md:h-32 opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer" />
+            <img src="https://images.credly.com/size/340x340/images/2d84e428-9078-49b6-a804-13c15383d0de/image.png" alt="AWS Certified Data Engineer" className="h-24 md:h-32 opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer" />
+            <img src="https://images.credly.com/size/340x340/images/bd31ef42-d460-493e-8503-39592aaf0458/image.png" alt="AWS Certified DevOps Engineer" className="h-24 md:h-32 opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer" />
+            <img src="https://images.credly.com/size/340x340/images/778bde6c-ad1c-4312-ac33-2fa40d50a147/image.png" alt="AWS Certified Machine Learning Engineer" className="h-24 md:h-32 opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer" />
+            <img src="https://images.credly.com/size/340x340/images/53acdae5-d69f-4dda-b650-d02ed7a50dd7/image.png" alt="AWS Certified Security Specialty" className="h-24 md:h-32 opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer" />
           </div>
         </div>
       </section>
 
-      {/* 5. History */}
+      {/* 5. History
       <section className="py-32 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center space-x-6 mb-16">
@@ -134,7 +132,7 @@ const Company: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

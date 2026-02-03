@@ -2,21 +2,20 @@
 import React from 'react';
 
 const logos = [
-  'https://cdn.worldvectorlogo.com/logos/react-2.svg',
-  'https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg',
-  'https://cdn.worldvectorlogo.com/logos/stripe-4.svg',
-  'https://cdn.worldvectorlogo.com/logos/framer-motion.svg',
-  'https://cdn.worldvectorlogo.com/logos/typescript.svg',
-  'https://cdn.worldvectorlogo.com/logos/amazon-web-services-2.svg',
-  'https://cdn.worldvectorlogo.com/logos/docker-3.svg',
-  'https://cdn.worldvectorlogo.com/logos/next-js.svg',
+
+  '../components/assets/logo.svg',
+  '../components/assets/logo.svg',
+  '../components/assets/logo.svg',
+  '../components/assets/logo.svg',
+  '../components/assets/logo.svg',
+  '../components/assets/logo.svg',
+  '../components/assets/logo.svg',
 ];
 
 const TrustedBy: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-6 pt-10 pb-20 overflow-hidden">
-      <p className="text-center text-sm font-semibold text-gray-500 mb-12 uppercase tracking-widest">Trusted By</p>
-      
+      <p className="text-center text-sm font-semibold text-gray-500 mb-12 uppercase tracking-widest">Trusted Partners</p>
       <div className="relative w-full overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-20 before:bg-gradient-to-r before:from-[#030712] before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-20 after:bg-gradient-to-l after:after:from-[#030712] after:after:to-transparent">
         <div className="flex w-[200%] animate-carousel-left">
           {/* First set of logos */}

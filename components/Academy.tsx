@@ -1,14 +1,14 @@
 
 import React, { useState, useMemo } from 'react';
-import { 
-  Code, 
-  Smartphone, 
-  Database, 
-  BarChart3, 
-  ShieldAlert, 
-  Cloud, 
-  Cpu, 
-  CheckCircle2, 
+import {
+  Code,
+  Smartphone,
+  Database,
+  BarChart3,
+  ShieldAlert,
+  Cloud,
+  Cpu,
+  CheckCircle2,
   ArrowLeft,
   Calendar,
   Clock,
@@ -238,7 +238,7 @@ const AdmissionsFormModal: React.FC<{ isOpen: boolean; onClose: () => void }> = 
         <div className="p-12">
           <h3 className="text-3xl font-extrabold mb-2 tracking-tight">Student Application</h3>
           <p className="text-gray-400 mb-10 font-light">Enter your details to begin your journey with Xydge Academy.</p>
-          
+
           <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
@@ -250,7 +250,7 @@ const AdmissionsFormModal: React.FC<{ isOpen: boolean; onClose: () => void }> = 
                 <input type="email" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-blue-500 outline-none transition-all" placeholder="john@example.com" />
               </div>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-[10px] font-black uppercase tracking-widest text-gray-500">Phone Number</label>
@@ -299,9 +299,9 @@ const EnrollModal: React.FC<{ isOpen: boolean; onClose: () => void; onOpenForm: 
         <div className="p-10">
           <h3 className="text-3xl font-extrabold mb-4 tracking-tight">Begin Your Journey</h3>
           <p className="text-gray-400 mb-10 font-light">Choose how you'd like to proceed with your enrollment.</p>
-          
+
           <div className="space-y-4">
-            <button 
+            <button
               onClick={() => window.open('https://wa.me/2348083323258', '_blank')}
               className="w-full flex items-center justify-between p-6 rounded-2xl bg-blue-600 hover:bg-blue-500 transition-all group shadow-xl shadow-blue-900/20"
             >
@@ -315,7 +315,7 @@ const EnrollModal: React.FC<{ isOpen: boolean; onClose: () => void; onOpenForm: 
               <ArrowRight className="text-white/50 group-hover:text-white transition-colors" size={20} />
             </button>
 
-            <button 
+            <button
               onClick={onOpenForm}
               className="w-full flex items-center justify-between p-6 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition-all group"
             >
@@ -329,7 +329,7 @@ const EnrollModal: React.FC<{ isOpen: boolean; onClose: () => void; onOpenForm: 
               <ArrowRight className="text-gray-600 group-hover:text-white transition-colors" size={20} />
             </button>
           </div>
-          
+
           <p className="text-[10px] text-center text-gray-600 uppercase font-bold tracking-[0.2em] mt-8">Secure Enrollment Process</p>
         </div>
       </div>
@@ -352,7 +352,7 @@ const Academy: React.FC = () => {
       <div className="pt-32 pb-20 px-6 max-w-7xl mx-auto min-h-screen">
         <EnrollModal isOpen={isEnrollModalOpen} onClose={() => setIsEnrollModalOpen(false)} onOpenForm={openForm} />
         <AdmissionsFormModal isOpen={isAdmissionsFormOpen} onClose={() => setIsAdmissionsFormOpen(false)} />
-        <button 
+        <button
           onClick={() => setSelectedCourse(null)}
           className="flex items-center space-x-2 text-gray-400 hover:text-white mb-12 transition-colors group"
         >
@@ -416,7 +416,7 @@ const Academy: React.FC = () => {
               </div>
 
               <div className="pt-6 border-t border-white/10">
-                <button 
+                <button
                   onClick={() => setIsEnrollModalOpen(true)}
                   className="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg active:scale-95 mb-4"
                 >
@@ -435,13 +435,13 @@ const Academy: React.FC = () => {
     <div className="min-h-screen">
       <EnrollModal isOpen={isEnrollModalOpen} onClose={() => setIsEnrollModalOpen(false)} onOpenForm={openForm} />
       <AdmissionsFormModal isOpen={isAdmissionsFormOpen} onClose={() => setIsAdmissionsFormOpen(false)} />
-      
+
       {/* 1. Starry Solar System Hero */}
       <section className="relative pt-60 pb-32 px-6 overflow-hidden flex flex-col items-center min-h-[85vh] justify-center text-center">
         <SolarSystemBackground />
         <div className="max-w-5xl mx-auto relative z-10">
           <span className="text-[10px] font-black tracking-[0.4em] text-blue-500 uppercase mb-8 block">The Future of Tech Education</span>
-          <h1 className="text-6xl md:text-9xl font-extrabold mb-12 tracking-tighter leading-none text-white">Xydge Academy</h1>
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-extrabold mb-12 tracking-tighter leading-none text-white">Xydge Academy</h1>
           <p className="text-xl md:text-3xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
             High-performance engineering immersion designed to turn ambitious builders into industry-leading software experts.
           </p>
@@ -452,23 +452,23 @@ const Academy: React.FC = () => {
       <section className="py-24 px-6 relative bg-white/[0.01]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight">Why Choose Our Academy?</h2>
+            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">Why Choose Our Academy?</h2>
             <p className="text-gray-400 mt-6 text-xl font-light">The Xydge difference lies in our high-fidelity approach to learning.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="glass-card p-10 rounded-[3rem] border-white/5">
               <Zap className="text-blue-500 mb-6" size={32} />
-              <h3 className="text-2xl font-bold mb-4">Project-First Learning</h3>
+              <h3 className="text-xl font-bold mb-4">Project-First Learning</h3>
               <p className="text-gray-500 font-light leading-relaxed">We don't just teach theory. You build production-ready applications that serve as your professional portfolio.</p>
             </div>
             <div className="glass-card p-10 rounded-[3rem] border-white/5">
               <Users className="text-purple-500 mb-6" size={32} />
-              <h3 className="text-2xl font-bold mb-4">Senior Mentorship</h3>
+              <h3 className="text-xl font-bold mb-4">Senior Mentorship</h3>
               <p className="text-gray-500 font-light leading-relaxed">Get direct code reviews and architectural advice from engineers who build world-class products daily.</p>
             </div>
             <div className="glass-card p-10 rounded-[3rem] border-white/5">
               <Globe className="text-emerald-500 mb-6" size={32} />
-              <h3 className="text-2xl font-bold mb-4">Global Network</h3>
+              <h3 className="text-xl font-bold mb-4">Global Network</h3>
               <p className="text-gray-500 font-light leading-relaxed">Graduate into an elite ecosystem of hiring partners ranging from fast-growth startups to Fortune 500s.</p>
             </div>
           </div>
@@ -484,8 +484,8 @@ const Academy: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {coreCourses.map((course) => (
-              <div 
-                key={course.id} 
+              <div
+                key={course.id}
                 onClick={() => setSelectedCourse(course)}
                 className="glass-card p-8 rounded-[3rem] border-white/5 hover:border-blue-500/40 transition-all cursor-pointer group flex flex-col justify-between h-[360px] relative overflow-hidden"
               >
@@ -518,8 +518,8 @@ const Academy: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {capacityCourses.map((course) => (
-              <div 
-                key={course.id} 
+              <div
+                key={course.id}
                 onClick={() => setSelectedCourse(course)}
                 className="glass-card p-10 rounded-[3rem] border-white/5 hover:border-emerald-500/20 transition-all group relative overflow-hidden flex flex-col justify-between h-[380px] cursor-pointer"
               >
@@ -564,7 +564,7 @@ const Academy: React.FC = () => {
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">Voices of Success</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">Voices of Success</h2>
             <p className="text-gray-400 max-w-2xl mx-auto font-light">Hear from the engineers and analysts who launched their careers through Xydge.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -600,9 +600,9 @@ const Academy: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="relative">
               <div className="absolute -top-10 -left-10 w-64 h-64 bg-blue-600/20 blur-[100px] -z-10 rounded-full"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2400" 
-                alt="Xydge Learning Environment" 
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2400"
+                alt="Xydge Learning Environment"
                 className="rounded-[4rem] shadow-2xl border border-white/10 opacity-70"
               />
               <div className="absolute -bottom-8 -right-8 glass-card p-6 rounded-3xl border-white/10 hidden md:block">
@@ -613,7 +613,7 @@ const Academy: React.FC = () => {
               </div>
             </div>
             <div>
-              <h2 className="text-4xl md:text-6xl font-extrabold mb-10 tracking-tight">The Best for a Reason</h2>
+              <h2 className="text-3xl md:text-5xl font-extrabold mb-10 tracking-tight">The Best for a Reason</h2>
               <ul className="space-y-8">
                 {[
                   { title: "Industry-Standard Stack", desc: "Learn with the same tools used by the top 1% of tech giants." },
@@ -634,20 +634,19 @@ const Academy: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* 8. Final CTA Section */}
       <section className="py-40 px-6 text-center">
         <div className="max-w-4xl mx-auto relative">
           <div className="absolute inset-0 bg-blue-600/10 blur-[120px] -z-10 rounded-full"></div>
-          <h2 className="text-5xl md:text-8xl font-extrabold mb-12 tracking-tighter leading-tight">Your Digital Mastery <br /> Starts Here.</h2>
+          <h2 className="text-3xl md:text-6xl font-extrabold mb-12 tracking-tighter leading-tight">Your Digital Mastery <br />Starts Here.</h2>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <button 
+            <button
               onClick={() => setIsEnrollModalOpen(true)}
-              className="px-14 py-7 bg-blue-600 hover:bg-blue-500 text-white font-black text-xl rounded-2xl shadow-2xl active:scale-95 transition-all flex items-center justify-center"
+              className="px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white font-black text-lg rounded-2xl shadow-2xl active:scale-95 transition-all flex items-center justify-center"
             >
-              Enroll for Cohort 2025 <ArrowRight className="ml-3" size={24} />
+              Enroll for Cohort 2025 <ArrowRight className="ml-3" size={20} />
             </button>
-            <button className="px-14 py-7 glass-card hover:bg-white/5 border-white/10 text-white font-bold text-xl rounded-2xl active:scale-95 transition-all flex items-center justify-center">
+            <button className="px-10 py-5 glass-card hover:bg-white/5 border-white/10 text-white font-bold text-lg rounded-2xl active:scale-95 transition-all flex items-center justify-center">
               Download Prospectus
             </button>
           </div>

@@ -16,8 +16,8 @@ const SolarSystemBackground = () => {
 
   const planets = [
     { radius: '300px', duration: '40s', color: 'bg-blue-500/10', blur: 'blur-[60px]', size: 'w-32 h-32' },
-    { radius: '500px', duration: '65s', color: 'bg-indigo-500/5', blur: 'blur-[80px]', size: 'w-48 h-48' },
-    { radius: '750px', duration: '90s', color: 'bg-purple-500/5', blur: 'blur-[70px]', size: 'w-64 h-64' },
+    { radius: '500px', duration: '65s', color: 'bg-indigo-500/5', blur: 'blur-[80px]', size: 'w-58 h-58' },
+    { radius: '750px', duration: '90s', color: 'bg-purple-500/5', blur: 'blur-[70px]', size: 'w-104 h-104' },
     { radius: '200px', duration: '30s', color: 'bg-cyan-500/10', blur: 'blur-[40px]', size: 'w-24 h-24' },
   ];
 
@@ -26,7 +26,7 @@ const SolarSystemBackground = () => {
       {/* Layered Nebulous Gradients */}
       <div className="absolute top-[-20%] left-[-10%] w-full h-full bg-blue-900/10 blur-[150px] opacity-30 rounded-full"></div>
       <div className="absolute bottom-[-20%] right-[-10%] w-full h-full bg-purple-900/10 blur-[150px] opacity-30 rounded-full"></div>
-      
+
       {/* Star Layer 1 - Slow Spin */}
       <div className="absolute inset-[-50%] animate-spin-slow opacity-40">
         {stars.slice(0, 75).map((star) => (
@@ -157,10 +157,10 @@ const Hero: React.FC<HeroProps> = ({ onNavigateAcademy }) => {
       const viewportHeight = window.innerHeight;
       const centerOfViewport = viewportHeight / 2;
       const centerOfElement = rect.top + rect.height / 2;
-      
+
       const distanceFromCenter = Math.abs(centerOfElement - centerOfViewport);
       const threshold = viewportHeight * 0.7;
-      
+
       let newScale = 1.05 - (distanceFromCenter / threshold) * 0.2;
       newScale = Math.min(1.05, Math.max(0.85, newScale));
       setScale(newScale);
@@ -174,11 +174,11 @@ const Hero: React.FC<HeroProps> = ({ onNavigateAcademy }) => {
   return (
     <section className="relative pt-48 pb-32 px-6 overflow-hidden min-h-screen flex flex-col items-center">
       <SolarSystemBackground />
-      
+
       <div className="max-w-7xl mx-auto text-center relative z-10">
         {/* Badge */}
-        <div className="inline-block mb-12 py-3 px-6 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl">
-          <span className="text-[10px] font-black tracking-[0.3em] text-blue-400 uppercase">Innovating the Digital Frontier</span>
+        <div className="inline-block mb-12 py-1 px-6 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl">
+          <span className="text-[8px] md:text-[10px] font-black tracking-[0.3em] text-blue-400 uppercase">Innovating the Digital Frontier</span>
         </div>
 
         {/* Main Title with Typewriter */}
@@ -190,7 +190,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigateAcademy }) => {
 
         {/* Subtitle */}
         <p className="max-w-3xl mx-auto text-lg md:text-2xl text-gray-400 mb-16 leading-relaxed font-light">
-          We engineer high-performance applications, AI-driven solutions, and world-class digital products that empower global brands to lead their industries.
+          We engineer high-performance applications, AI-driven solutions, world-class digital products and provide training that empower global brands to lead their industries.
         </p>
 
         {/* Action Buttons */}
@@ -198,7 +198,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigateAcademy }) => {
           <button className="w-full sm:w-auto px-12 py-6 bg-blue-600 hover:bg-blue-500 text-white rounded-[1.5rem] font-bold text-lg transition-all shadow-[0_20px_50px_rgba(37,99,235,0.3)] transform hover:-translate-y-2 active:scale-95">
             Start a Project
           </button>
-          <button 
+          <button
             onClick={onNavigateAcademy}
             className="w-full sm:w-auto px-12 py-6 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-[1.5rem] font-bold text-lg transition-all backdrop-blur-xl transform hover:-translate-y-1.5 active:scale-95"
           >
@@ -214,7 +214,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigateAcademy }) => {
 
 
         {/* Video Preview Frame */}
-        <div 
+        <div
           ref={videoContainerRef}
           className="relative max-w-6xl mx-auto mt-20 transition-transform duration-500 ease-out will-change-transform"
           style={{ transform: `scale(${scale})` }}
@@ -223,14 +223,14 @@ const Hero: React.FC<HeroProps> = ({ onNavigateAcademy }) => {
             <div className="aspect-video rounded-[2.5rem] bg-gray-900 flex items-center justify-center overflow-hidden relative group">
               {isPlaying ? (
                 <div className="w-full h-full relative">
-                  <iframe 
-                    src="https://www.youtube.com/embed/fkdOJKY-sZo?autoplay=1&rel=0&showinfo=0&modestbranding=1" 
+                  <iframe
+                    src="../components/assets/animation.mp4"
                     title="Xydge Story Video"
                     className="w-full h-full border-0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
-                  <button 
+                  <button
                     onClick={() => setIsPlaying(false)}
                     className="absolute top-4 right-4 z-20 w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
                     aria-label="Close Video"
@@ -240,18 +240,18 @@ const Hero: React.FC<HeroProps> = ({ onNavigateAcademy }) => {
                 </div>
               ) : (
                 <>
-                  <img 
-                    src="https://images.unsplash.com/photo-1551288049-bbbda546697a?auto=format&fit=crop&q=80&w=2400" 
-                    alt="Xydge Core Product Story" 
+                  <img
+                    src="../components/assets/rodeo.jpg"
+                    alt="Xydge Core Product Story"
                     className="w-full h-full object-cover opacity-60 transition-transform duration-[2000ms] group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950/95 via-gray-950/20 to-transparent"></div>
-                  
+
                   {/* Central Play Button */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <button 
+                    <button
                       onClick={() => setIsPlaying(true)}
-                      className="w-28 h-28 bg-blue-600/90 backdrop-blur-2xl rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-[0_0_50px_rgba(37,99,235,0.5)] group/play relative"
+                      className="w-20 h-20 md:w-28 md:h-28 bg-blue-600/90 backdrop-blur-2xl rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-[0_0_50px_rgba(37,99,235,0.5)] group/play relative"
                       aria-label="Play Story Video"
                     >
                       <Play className="text-white ml-2 fill-white transition-transform group-hover/play:scale-110" size={40} />
@@ -263,7 +263,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigateAcademy }) => {
               )}
             </div>
           </div>
-          
+
           {/* Light Reflection Pool */}
           <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 w-[90%] h-32 bg-blue-600/15 blur-[100px] rounded-full pointer-events-none -z-10"></div>
         </div>

@@ -11,15 +11,15 @@ const mockData: Record<string, any> = {
   'kulture-market': {
     title: 'Kulture Market',
     tagline: 'Modernizing multi-vendor commerce for a global audience.',
-    img: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=2400',
+    img: '../components/assets/component1.png',
     stats: [
-      { label: 'Countries Reach', value: '45+', icon: <Globe size={18} /> },
-      { label: 'Active Sellers', value: '12k+', icon: <Users size={18} /> },
+      { label: 'Countries Reach', value: '2+', icon: <Globe size={18} /> },
+      { label: 'Active Sellers', value: '2k+', icon: <Users size={18} /> },
       { label: 'Platform Growth', value: '340%', icon: <TrendingUp size={18} /> },
-      { label: 'Total Sales Vol.', value: '$25M+', icon: <DollarSign size={18} /> },
+      { label: 'Total Sales Vol.', value: '$', icon: <DollarSign size={18} /> },
     ],
     mission: "The mission was clear: democratize global artisan trade. We set out to build a marketplace that abstracts away the complexities of international logistics, payments, and language barriers, allowing creators to focus solely on their craft.",
-    origin: "It began as a local initiative in 2023. Xydge was commissioned to scale the product for a global launch. We reimagined the backend architecture from the ground up, moving from a monolithic structure to an event-driven microservices architecture to handle seasonal surges.",
+    origin: "It began as a local initiative in 2025. Xydge was commissioned to scale the product for a global launch. We reimagined the backend architecture from the ground up, moving from a monolithic structure to an event-driven microservices architecture to handle seasonal surges.",
     features: [
       { title: 'Real-time Escrow Engine', desc: 'Secure transaction handling that holds funds until delivery is verified globally.' },
       { title: 'AI Logistics Bridge', desc: 'Predictive routing system that selects the most efficient global carrier based on real-time data.' },
@@ -61,41 +61,41 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ caseId, onBack }) => 
         </button>
 
         <div className="mb-20">
-          <h1 className="text-5xl md:text-8xl font-extrabold mb-6 tracking-tighter leading-tight">{data.title}</h1>
-          <p className="text-2xl text-gray-400 font-light max-w-3xl leading-relaxed">{data.tagline}</p>
+          <h1 className="text-4xl md:text-5xl md:text-8xl font-extrabold mb-6 tracking-tighter leading-tight">{data.title}</h1>
+          <p className="md:text-2xl text-gray-400 font-light max-w-3xl leading-relaxed">{data.tagline}</p>
         </div>
 
         {/* Hero Image */}
-        <div className="rounded-[4rem] overflow-hidden border border-white/5 mb-16 aspect-[21/9] shadow-2xl">
-          <img src={data.img} className="w-full h-full object-cover" alt={data.title} />
+        <div className="rounded-[1rem] border border-white/5 mb-16 aspect-[21/14] shadow-2xl">
+          <img src={data.img} className="w-full h-full object-cover rounded-[1rem]" alt={data.title} />
         </div>
 
         {/* Stats Dashboard */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
           {data.stats.map((stat: any, i: number) => (
-            <div key={i} className="glass-card p-10 rounded-[3rem] border-white/5 text-center hover:border-blue-500/20 transition-all">
+            <div key={i} className="glass-card p-4 md:p-10 rounded-[1rem] border-white/5 text-center hover:border-blue-500/20 transition-all">
               <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center mx-auto mb-4 text-blue-400">{stat.icon}</div>
-              <p className="text-3xl font-black mb-1">{stat.value}</p>
-              <p className="text-[10px] text-gray-500 uppercase font-black tracking-widest">{stat.label}</p>
+              <p className="text-2xl md:text-3xl font-black mb-1">{stat.value}</p>
+              <p className="text-[8px] md:text-[10px] text-gray-500 uppercase font-black tracking-widest">{stat.label}</p>
             </div>
           ))}
         </div>
 
         {/* Mission & How it Began */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-32 items-start">
-          <div className="glass-card p-12 rounded-[3.5rem] border-blue-500/10">
+          <div className="glass-card p-6 md:p-12 rounded-[2rem] border-blue-500/10">
             <h2 className="text-3xl font-bold mb-8 flex items-center">
               <span className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center mr-4 text-blue-500"><Target size={20} /></span>
               The Mission
             </h2>
-            <p className="text-xl text-gray-400 leading-relaxed font-light">{data.mission}</p>
+            <p className="md:text-xl text-gray-400 leading-relaxed font-light">{data.mission}</p>
           </div>
-          <div className="glass-card p-12 rounded-[3.5rem] border-purple-500/10">
+          <div className="glass-card p-6 md:p-12 rounded-[2rem] border-purple-500/10">
             <h2 className="text-3xl font-bold mb-8 flex items-center">
               <span className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center mr-4 text-purple-500"><Sparkles size={20} /></span>
               How it Began
             </h2>
-            <p className="text-xl text-gray-400 leading-relaxed font-light">{data.origin}</p>
+            <p className="md:text-xl text-gray-400 leading-relaxed font-light">{data.origin}</p>
           </div>
         </div>
 
@@ -104,11 +104,11 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ caseId, onBack }) => 
           <h2 className="text-4xl font-extrabold mb-16 tracking-tight">Technical Highlights</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {data.features.map((f: any, i: number) => (
-              <div key={i} className="glass-card p-10 rounded-[3rem] border-white/5 group hover:border-blue-500/20 transition-all">
+              <div key={i} className="glass-card p-10 rounded-[2rem] border-white/5 group hover:border-blue-500/20 transition-all">
                 <div className="flex items-start space-x-6">
                   <div className="mt-1 flex-shrink-0 text-blue-500"><CheckCircle2 size={24} /></div>
                   <div><h4 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">{f.title}</h4>
-                  <p className="text-gray-500 leading-relaxed font-light">{f.desc}</p></div>
+                    <p className="text-gray-500 leading-relaxed font-light">{f.desc}</p></div>
                 </div>
               </div>
             ))}
@@ -116,11 +116,11 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ caseId, onBack }) => 
         </div>
 
         {/* What makes it stand out */}
-        <div className="glass-card p-12 lg:p-20 rounded-[4rem] border-blue-500/20 mb-32 relative overflow-hidden">
+        <div className="glass-card p-12 lg:p-20 rounded-[2rem] border-blue-500/20 mb-32 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 blur-[120px] -z-10"></div>
           <div className="max-w-4xl">
             <h2 className="text-3xl font-bold mb-8 text-blue-400 uppercase tracking-widest">The Competitive Edge</h2>
-            <p className="text-2xl lg:text-4xl text-gray-200 font-light leading-snug italic">"{data.usp}"</p>
+            <p className="text-lg md:text-2xl lg:text-4xl text-gray-200 font-light leading-snug italic">"{data.usp}"</p>
           </div>
         </div>
 
@@ -128,8 +128,8 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ caseId, onBack }) => 
         <section className="py-32 px-6 text-center border-t border-white/5 relative">
           <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] pointer-events-none text-[15vw] font-black">LEGACY</div>
           <h2 className="text-4xl md:text-5xl font-extrabold mb-10 tracking-tight leading-tight">Build Something <br className="hidden md:block" /> Similar With Us</h2>
-          <button className="px-12 py-6 bg-blue-600 hover:bg-blue-500 text-white font-black text-xl rounded-2xl transition-all shadow-2xl active:scale-95 flex items-center mx-auto">
-            <MessageSquare className="mr-3" /> Contact Engineering Team
+          <button className="px-4 md:px-12 py-6 bg-blue-600 hover:bg-blue-500 text-white font-black md:text-xl rounded-2xl transition-all shadow-2xl active:scale-95 flex items-center mx-auto">
+            <MessageSquare className="mr-1" />Contact Engineering Team
           </button>
         </section>
       </div>
