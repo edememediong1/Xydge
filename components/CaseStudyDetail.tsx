@@ -24,9 +24,9 @@ const mockData: Record<string, any> = {
       { title: 'Real-time Escrow Engine', desc: 'Secure transaction handling that holds funds until delivery is verified globally.' },
       { title: 'AI Logistics Bridge', desc: 'Predictive routing system that selects the most efficient global carrier based on real-time data.' },
       { title: 'Unified Vendor Dash', desc: 'A complex data cockpit providing sellers with predictive inventory insights.' },
-      { title: 'Instant Currency FX', desc: 'Settlement in 12+ local currencies without legacy bank latency.' },
+      { title: 'Instant Currency FX', desc: 'Settlement in 2 local currencies without legacy bank latency.' },
     ],
-    usp: "The standout innovation is our proprietary 'Kulture-Log' algorithm—it reduces cross-continental shipping times by 40% using machine learning to predict customs bottlenecks before they happen."
+    usp: "The platform's real advantage is a fast, seamless trading experience with owner-first vendor dashboards and a purpose-built rental engine — users can list, trade, and run rentals with efficient rental logic while keeping full control of their dashboards."
   },
   'pulse-health': {
     title: 'Pulse Health',
@@ -120,7 +120,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ caseId, onBack }) => 
           <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 blur-[120px] -z-10"></div>
           <div className="max-w-4xl">
             <h2 className="text-3xl font-bold mb-8 text-blue-400 uppercase tracking-widest">The Competitive Edge</h2>
-            <p className="text-lg md:text-2xl lg:text-4xl text-gray-200 font-light leading-snug italic">"{data.usp}"</p>
+            <p className="text-base md:text-xl lg:text-4xl text-gray-200 font-light leading-snug italic">"{data.usp}"</p>
           </div>
         </div>
 

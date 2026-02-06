@@ -13,11 +13,54 @@ const sectors = [
   { name: 'Mobile Apps', icon: <Smartphone className="text-rose-400" />, desc: 'Native and hybrid apps for billions of devices globally.' },
 ];
 
-const clientReviews = [
-  { name: "John Stevens", role: "CTO, Fintech Solutions", text: "Xydge built our infrastructure to handle 10k TPS. Flawless execution and world-class engineering standards.", img: "https://i.pravatar.cc/100?u=j1" },
-  { name: "Maria Garcia", role: "Founder, HealthBridge", text: "The team understood our complex medical requirements instantly and delivered a life-saving AI platform.", img: "https://i.pravatar.cc/100?u=j2" },
-  { name: "Liam Chen", role: "Product VP, GlobalCart", text: "Best multi-vendor logic we've ever implemented. Scalable, fast, and remarkably intuitive UI.", img: "https://i.pravatar.cc/100?u=j3" },
+const testimonials = [
+  {
+    name: "Anne Usang",
+    role: "Founder at Cloud with Anne Academy",
+    text: "Xydge helped me turn a rough outline into a clear, teachable platform. They listened closely, simplified the flow, and the final build felt exactly like the vision in my head.",
+    img: "https://ui-avatars.com/api/?name=Anne+Usang&background=0F172A&color=FFFFFF",
+  },
+  {
+    name: "Esther Monday",
+    role: "Project Manager at Ngage Media",
+    text: "Communication was steady and honest. The team delivered each milestone on time and flagged risks early, which made stakeholder updates easy.",
+    img: "https://ui-avatars.com/api/?name=Esther+Monday&background=0F172A&color=FFFFFF",
+  },
+  {
+    name: "Sifon Thomas",
+    role: "Founder of Vably",
+    text: "We needed speed without cutting corners. Xydge shipped a clean MVP, then stayed to refine the details with real user feedback.",
+    img: "https://ui-avatars.com/api/?name=Sifon+Thomas&background=0F172A&color=FFFFFF",
+  },
+  {
+    name: "Mfon Emayak",
+    role: "Design Lead at Dindel Designs",
+    text: "Their engineers respected the design system and asked the right questions. The handoff was smooth and the UI polish was spot on.",
+    img: "https://ui-avatars.com/api/?name=Mfon+Emayak&background=0F172A&color=FFFFFF",
+  },
+  {
+    name: "Imaobong Danson",
+    role: "Project Manager",
+    text: "Dependable, practical, and calm under pressure. They made complex work feel manageable and kept the team aligned throughout.",
+    img: "https://ui-avatars.com/api/?name=Imaobong+Danson&background=0F172A&color=FFFFFF",
+  },
 ];
+
+const TestimonialCard: React.FC<{ item: typeof testimonials[0] }> = ({ item }) => (
+  <div className="glass-card p-6 rounded-[2rem] w-[350px] mx-4 flex-shrink-0 group hover:border-blue-500/30 transition-all">
+    <div className="flex mb-4">
+      {[...Array(5)].map((_, i) => <Star key={i} size={12} className="text-amber-400 fill-amber-400 mr-1" />)}
+    </div>
+    <p className="text-gray-300 text-sm italic font-light leading-relaxed mb-6">"{item.text}"</p>
+    <div className="flex items-center space-x-3">
+      <img src={item.img} className="w-10 h-10 rounded-full grayscale group-hover:grayscale-0 transition-all" alt={item.name} />
+      <div>
+        <h4 className="text-sm font-bold text-white">{item.name}</h4>
+        <p className="text-[10px] text-gray-500 uppercase font-black tracking-widest">{item.role}</p>
+      </div>
+    </div>
+  </div>
+);
 
 const SVGFlowLines = () => (
   <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,30 +219,34 @@ const Portfolio: React.FC<{ onSelectCase: (id: string) => void }> = ({ onSelectC
         </div>
       </section>
 
-      {/* Client Feedback "The Train" Carousel */}
+      {/* Client Feedback */}
       <section className="py-16 sm:py-32 overflow-hidden px-4 sm:px-6">
         <div className="max-w-7xl mx-auto mb-12 sm:mb-20 text-center">
           <h2 className="text-2xl sm:text-4xl md:text-6xl font-extrabold tracking-tight">What Clients Say</h2>
           <p className="text-gray-400 mt-4 sm:mt-6 font-light text-sm sm:text-base md:text-xl">Testimonials from our global ecosystem of partners.</p>
         </div>
-        <div className="flex w-[200%] animate-carousel-left marquee-mask">
-          <div className="flex">
-            {clientReviews.concat(clientReviews).map((r, i) => (
-              <div key={i} className="glass-card p-6 sm:p-8 md:p-12 rounded-2xl sm:rounded-[3.5rem] border-white/5 w-[280px] sm:w-[300px] mx-3 sm:mx-6 flex-shrink-0 flex flex-col justify-between hover:border-blue-500/20 transition-all">
-                <div>
-                  <div className="flex mb-4 sm:mb-6">{[...Array(5)].map((_, j) => <Star key={j} size={12} className="text-amber-400 fill-amber-400 mr-1" />)}</div>
-                  <p className="text-gray-200 italic mb-6 sm:mb-10 font-light text-sm sm:text-lg md:text-xl leading-relaxed">"{r.text}"</p>
-                </div>
-                <div className="flex items-center space-x-3 sm:space-x-5">
-                  <img src={r.img} className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-blue-500/20 object-cover flex-shrink-0" alt={r.name} />
-                  <div className="min-w-0">
-                    <h4 className="font-bold text-white text-xs sm:text-base md:text-lg truncate">{r.name}</h4>
-                    <p className="text-[6px] sm:text-[8px] md:text-[10px] text-gray-500 uppercase font-black tracking-[0.1em] truncate">{r.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+
+        <div className="relative space-y-10">
+          <div className="flex w-[200%] animate-carousel-left">
+            <div className="flex">
+              {testimonials.map((t, i) => <TestimonialCard key={i} item={t} />)}
+            </div>
+            <div className="flex">
+              {testimonials.map((t, i) => <TestimonialCard key={`dup1-${i}`} item={t} />)}
+            </div>
           </div>
+
+          <div className="flex w-[200%] animate-carousel-right">
+            <div className="flex">
+              {[...testimonials].reverse().map((t, i) => <TestimonialCard key={i} item={t} />)}
+            </div>
+            <div className="flex">
+              {[...testimonials].reverse().map((t, i) => <TestimonialCard key={`dup2-${i}`} item={t} />)}
+            </div>
+          </div>
+{/* 
+          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#030712] to-transparent z-10"></div>
+          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#030712] to-transparent z-10"></div> */}
         </div>
       </section>
 

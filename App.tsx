@@ -61,7 +61,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen flex flex-col">
       <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-900/20 blur-[120px] rounded-full"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-900/10 blur-[120px] rounded-full"></div>
@@ -70,7 +70,7 @@ const App: React.FC = () => {
 
       <Navbar />
       
-      <main>
+      <main className="flex-1">
         <Routes>
           <Route
             path="/"

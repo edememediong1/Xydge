@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Instagram, Twitter, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -13,10 +14,23 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Links */}
-          <div className="flex flex-wrap justify-center gap-8 text-sm font-medium text-gray-500">
-            <a href="#" className="hover:text-white transition-colors">Support</a>
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms and Conditions</a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm font-medium text-gray-500">
+            <div className="flex flex-wrap justify-center gap-6">
+              <a href="#" className="hover:text-white transition-colors">Support</a>
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms and Conditions</a>
+            </div>
+            <div className="flex items-center space-x-4">
+              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-white transition-colors">
+                <Instagram size={18} />
+              </a>
+              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter size={18} />
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin size={18} />
+              </a>
+            </div>
           </div>
 
           {/* Copyright */}
