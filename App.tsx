@@ -1,5 +1,6 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TrustedBy from './components/TrustedBy';
@@ -16,20 +17,47 @@ import Contact from './components/Contact';
 import CaseStudyDetail from './components/CaseStudyDetail';
 import WhatsAppChat from './components/WhatsAppChat';
 
-export type PageType = 'home' | 'academy' | 'portfolio' | 'case-study' | 'company' | 'contact';
+const HomePage: React.FC<{
+  onNavigateAcademy: () => void;
+  onNavigatePortfolio: () => void;
+  onSelectCase: (id: string) => void;
+}> = ({ onNavigateAcademy, onNavigatePortfolio, onSelectCase }) => (
+  <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <Hero onNavigateAcademy={onNavigateAcademy} />
+    <TrustedBy />
+    <Services onNavigateAcademy={onNavigateAcademy} />
+    <WhyChooseUs />
+    <FeaturedWork onNavigatePortfolio={onNavigatePortfolio} onSelectCase={onSelectCase} />
+    <TestimonialsHome />
+    <CTA />
+  </div>
+);
+
+const CaseStudyRoute: React.FC = () => {
+  const navigate = useNavigate();
+  const { caseId } = useParams();
+
+  if (!caseId) {
+    return null;
+  }
+
+  return (
+    <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+      <CaseStudyDetail caseId={caseId} onBack={() => navigate('/portfolio')} />
+    </div>
+  );
+};
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<PageType>('home');
-  const [selectedCaseId, setSelectedCaseId] = useState<string | null>(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  // Scroll to top when page changes
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [currentPage, selectedCaseId]);
+  }, [location.pathname]);
 
   const handleNavigateToCase = (id: string) => {
-    setSelectedCaseId(id);
-    setCurrentPage('case-study');
+    navigate(`/case-study/${id}`);
   };
 
   return (
@@ -40,53 +68,54 @@ const App: React.FC = () => {
         <div className="absolute top-[30%] right-[10%] w-[30%] h-[30%] bg-indigo-900/10 blur-[120px] rounded-full"></div>
       </div>
 
-      <Navbar onNavigate={(page) => setCurrentPage(page)} currentPage={currentPage} />
+      <Navbar />
       
       <main>
-        {currentPage === 'home' && (
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <Hero onNavigateAcademy={() => setCurrentPage('academy')} />
-            <TrustedBy />
-            <Services onNavigateAcademy={() => setCurrentPage('academy')} />
-            <WhyChooseUs />
-            <FeaturedWork onNavigatePortfolio={() => setCurrentPage('portfolio')} onSelectCase={handleNavigateToCase} />
-            <TestimonialsHome />
-            <CTA />
-          </div>
-        )}
-        
-        {currentPage === 'academy' && (
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <Academy />
-          </div>
-        )}
-
-        {currentPage === 'portfolio' && (
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <Portfolio onSelectCase={handleNavigateToCase} />
-          </div>
-        )}
-
-        {currentPage === 'company' && (
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <Company />
-          </div>
-        )}
-
-        {currentPage === 'contact' && (
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <Contact />
-          </div>
-        )}
-
-        {currentPage === 'case-study' && selectedCaseId && (
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <CaseStudyDetail 
-              caseId={selectedCaseId} 
-              onBack={() => setCurrentPage('portfolio')} 
-            />
-          </div>
-        )}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <HomePage
+                onNavigateAcademy={() => navigate('/academy')}
+                onNavigatePortfolio={() => navigate('/portfolio')}
+                onSelectCase={handleNavigateToCase}
+              />
+            }
+          />
+          <Route
+            path="/academy"
+            element={
+              <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <Academy />
+              </div>
+            }
+          />
+          <Route
+            path="/portfolio"
+            element={
+              <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <Portfolio onSelectCase={handleNavigateToCase} />
+              </div>
+            }
+          />
+          <Route
+            path="/company"
+            element={
+              <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <Company />
+              </div>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <Contact />
+              </div>
+            }
+          />
+          <Route path="/case-study/:caseId" element={<CaseStudyRoute />} />
+        </Routes>
       </main>
 
       <Footer />

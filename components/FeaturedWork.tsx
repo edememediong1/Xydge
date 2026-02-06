@@ -37,7 +37,7 @@ const FeaturedWork: React.FC<FeaturedWorkProps> = ({ onNavigatePortfolio, onSele
             <div className="flex-1 order-1 lg:order-2 p-6 lg:p-0 flex items-center justify-center">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl border border-white/20 transform rotate-[-2deg] lg:rotate-[-5deg] lg:translate-x-10 transition-transform group-hover:rotate-0">
                 <img
-                  src="../components/assets/component1.png"
+                  src="/assets/component1.png"
                   alt="Kulture Market Showcase"
                   className="w-full h-full object-cover"
                 />

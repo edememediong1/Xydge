@@ -3,11 +3,36 @@ import React from 'react';
 import { Star, Quote } from 'lucide-react';
 
 const testimonials = [
-  { name: "John Doe", role: "CEO at FintechX", text: "Xydge delivered beyond our expectations. Their technical prowess is unmatched.", img: "https://i.pravatar.cc/100?u=1" },
-  { name: "Alice Smith", role: "Product Lead at HealthCo", text: "The team at Xydge helped us scale our MVP to 100k users in record time.", img: "https://i.pravatar.cc/100?u=2" },
-  { name: "Robert Brown", role: "Founder of ShopSync", text: "Reliable, fast, and high-quality engineering. Highly recommended for complex builds.", img: "https://i.pravatar.cc/100?u=3" },
-  { name: "Jessica Lee", role: "CTO at EduFlow", text: "The academy students they place are top-tier. Their internal training is elite.", img: "https://i.pravatar.cc/100?u=4" },
-  { name: "Michael Gray", role: "Venture Partner", text: "Xydge doesn't just write code; they build businesses. Truly strategic partners.", img: "https://i.pravatar.cc/100?u=5" },
+  {
+    name: "Anne Usang",
+    role: "Founder at Cloud with Anne Academy",
+    text: "Xydge helped me turn a rough outline into a clear, teachable platform. They listened closely, simplified the flow, and the final build felt exactly like the vision in my head.",
+    img: "https://ui-avatars.com/api/?name=Anne+Usang&background=0F172A&color=FFFFFF",
+  },
+  {
+    name: "Esther Monday",
+    role: "Project Manager at Ngage Media",
+    text: "Communication was steady and honest. The team delivered each milestone on time and flagged risks early, which made stakeholder updates easy.",
+    img: "https://ui-avatars.com/api/?name=Esther+Monday&background=0F172A&color=FFFFFF",
+  },
+  {
+    name: "Sifon Thomas",
+    role: "Founder of Vably",
+    text: "We needed speed without cutting corners. Xydge shipped a clean MVP, then stayed to refine the details with real user feedback.",
+    img: "https://ui-avatars.com/api/?name=Sifon+Thomas&background=0F172A&color=FFFFFF",
+  },
+  {
+    name: "Mfon Emayak",
+    role: "Design Lead at Dindel Designs",
+    text: "Their engineers respected the design system and asked the right questions. The handoff was smooth and the UI polish was spot on.",
+    img: "https://ui-avatars.com/api/?name=Mfon+Emayak&background=0F172A&color=FFFFFF",
+  },
+  {
+    name: "Imaobong Danson",
+    role: "Project Manager",
+    text: "Dependable, practical, and calm under pressure. They made complex work feel manageable and kept the team aligned throughout.",
+    img: "https://ui-avatars.com/api/?name=Imaobong+Danson&background=0F172A&color=FFFFFF",
+  },
 ];
 
 // Fix: Explicitly type as React.FC to allow standard React props like 'key' in JSX

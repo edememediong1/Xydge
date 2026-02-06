@@ -3,13 +3,13 @@ import React from 'react';
 
 const logos = [
 
-  '../components/assets/logo.svg',
-  '../components/assets/logo.svg',
-  '../components/assets/logo.svg',
-  '../components/assets/logo.svg',
-  '../components/assets/logo.svg',
-  '../components/assets/logo.svg',
-  '../components/assets/logo.svg',
+  '/assets/logo.svg',
+  '/assets/logo.svg',
+  '/assets/logo.svg',
+  '/assets/logo.svg',
+  '/assets/logo.svg',
+  '/assets/logo.svg',
+  '/assets/logo.svg',
 ];
 
 const TrustedBy: React.FC = () => {

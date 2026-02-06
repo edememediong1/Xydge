@@ -223,13 +223,13 @@ const Hero: React.FC<HeroProps> = ({ onNavigateAcademy }) => {
             <div className="aspect-video rounded-[2.5rem] bg-gray-900 flex items-center justify-center overflow-hidden relative group">
               {isPlaying ? (
                 <div className="w-full h-full relative">
-                  <iframe
-                    src="../components/assets/animation.mp4"
+                  <video
+                    src="/assets/animation.mp4"
                     title="Xydge Story Video"
                     className="w-full h-full border-0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                    controls
+                    autoPlay
+                  ></video>
                   <button
                     onClick={() => setIsPlaying(false)}
                     className="absolute top-4 right-4 z-20 w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
@@ -241,7 +241,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigateAcademy }) => {
               ) : (
                 <>
                   <img
-                    src="../components/assets/rodeo.jpg"
+                    src="/assets/rodeo.jpg"
                     alt="Xydge Core Product Story"
                     className="w-full h-full object-cover opacity-60 transition-transform duration-[2000ms] group-hover:scale-110"
                   />

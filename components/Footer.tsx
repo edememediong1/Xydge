@@ -7,8 +7,8 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
           {/* Brand */}
-          <div className="flex items-center space-x-3">
-             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white">X</div>
+          <div className="flex items-center ">
+             <img src="/assets/xydgecommercialbg.png" alt="Xydge Logo" className="h-14 w-auto" />
              <span className="text-2xl font-bold">Xydge</span>
           </div>
 
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
 
           {/* Copyright */}
           <div className="text-sm text-gray-600">
-            © 2025 Xydge, All Rights Reserved
+            © 2026 Xydge, All Rights Reserved
           </div>
         </div>
       </div>

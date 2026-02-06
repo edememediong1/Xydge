@@ -51,10 +51,10 @@ const coreCourses: Course[] = [
     desc: 'Master the full stack from HTML/CSS to React and Node.js.',
     details: 'Our Web Development program is designed to take you from absolute zero to a industry-ready developer. You will build real-world applications and learn modern architectural patterns.',
     curriculum: [
-      { week: 'Week 1: Foundations', topics: ['Semantic HTML5 Architecture', 'CSS Variables & BEM Methodology', 'Web Accessibility (ARIA)'] },
-      { week: 'Week 2: Advanced Layouts', topics: ['CSS Flexbox & Grid Masterclass', 'Responsive Design Systems', 'Modern CSS Tooling (Sass/PostCSS)'] },
-      { week: 'Week 3: JavaScript Core', topics: ['Execution Context & Closures', 'Prototypes & Classes', 'ES6+ Implementation'] },
-      { week: 'Week 4-12: Frameworks & Scaling', topics: ['React Ecosystem', 'State Management', 'Fullstack Integration with Next.js'] },
+      { week: 'Foundations & Core Technologies', topics: ['HTML5 Semantic Architecture & Accessibility (WCAG)', 'Modern CSS (Flexbox, Grid, Custom Properties)', 'JavaScript ES6+ (Promises, Async/Await, Modules)', 'TypeScript Fundamentals & Type Safety'] },
+      { week: 'Frontend Frameworks & UI', topics: ['React.js (Hooks, Context API, Custom Hooks)', 'State Management (Redux Toolkit, Zustand)', 'Component Libraries (Tailwind CSS, Material UI)', 'Performance Optimization & Code Splitting'] },
+      { week: 'Backend Development', topics: ['Node.js & Express.js Architecture', 'RESTful API Design & GraphQL', 'Database Design (PostgreSQL, MongoDB)', 'Authentication & Authorization (JWT, OAuth)'] },
+      { week: 'Full-Stack Integration', topics: ['Next.js 14+ (App Router, Server Components)', 'API Integration & Error Handling', 'Deployment (Vercel, AWS, Docker)', 'Testing (Jest, React Testing Library, Playwright)'] },
     ]
   },
   {
@@ -67,8 +67,10 @@ const coreCourses: Course[] = [
     desc: 'Build native-like apps for iOS and Android using React Native.',
     details: 'Learn how to create high-performance mobile applications with a single codebase. Focus on performance, native bridge, and mobile UI/UX.',
     curriculum: [
-      { week: 'Week 1: Ecosystem', topics: ['Expo vs CLI Setup', 'Native Modules Overview', 'JSX for Mobile'] },
-      { week: 'Week 2-10: Native App Mastery', topics: ['Hardware APIs', 'Push Notifications', 'App Store Deployment'] },
+      { week: 'Mobile Fundamentals & Setup', topics: ['React Native CLI vs Expo Workflow', 'Mobile UI/UX Design Principles', 'Navigation (React Navigation, Expo Router)', 'State Management for Mobile Apps'] },
+      { week: 'Native Features & APIs', topics: ['Camera, Location & Sensors Integration', 'Push Notifications (FCM, APNs)', 'Native Modules & Bridges', 'Offline Storage (AsyncStorage, SQLite, Realm)'] },
+      { week: 'Performance & Optimization', topics: ['App Performance Profiling & Optimization', 'Memory Management & Leaks Prevention', 'Animation (Reanimated, Gesture Handler)', 'Image & Asset Optimization'] },
+      { week: 'Production & Deployment', topics: ['iOS & Android Build Configuration', 'App Store & Play Store Submission', 'CI/CD (EAS Build, Fastlane)', 'Crash Analytics & Monitoring (Sentry, Firebase)'] },
     ]
   },
   {
@@ -81,8 +83,10 @@ const coreCourses: Course[] = [
     desc: 'Dive into AI, Machine Learning, and predictive analytics.',
     details: 'Transform raw data into intelligence. This course covers everything from statistical analysis to deploying machine learning models.',
     curriculum: [
-      { week: 'Week 1: Statistics', topics: ['Probability Theory', 'Inferential Statistics', 'Central Limit Theorem'] },
-      { week: 'Week 2-14: ML & Deep Learning', topics: ['Neural Networks', 'Feature Engineering', 'Model Deployment'] },
+      { week: 'Python & Statistics Foundation', topics: ['Python (NumPy, Pandas, Matplotlib)', 'Probability & Statistical Inference', 'Hypothesis Testing & A/B Testing', 'Exploratory Data Analysis (EDA)'] },
+      { week: 'Machine Learning Algorithms', topics: ['Supervised Learning (Regression, Classification)', 'Unsupervised Learning (Clustering, PCA)', 'Ensemble Methods (Random Forest, XGBoost)', 'Feature Engineering & Selection'] },
+      { week: 'Deep Learning & Neural Networks', topics: ['Neural Networks & Backpropagation', 'CNNs for Computer Vision', 'RNNs & LSTMs for Sequence Data', 'Transfer Learning & Fine-tuning'] },
+      { week: 'MLOps & Production', topics: ['Model Training & Hyperparameter Tuning', 'Model Deployment (FastAPI, Flask)', 'MLOps (MLflow, Kubeflow)', 'Large Language Models (LLMs) & Prompt Engineering'] },
     ]
   },
   {
@@ -95,8 +99,10 @@ const coreCourses: Course[] = [
     desc: 'Learn to extract actionable insights from complex datasets.',
     details: 'Ideal for business professionals wanting to make data-driven decisions. Learn Excel, SQL, and PowerBI/Tableau.',
     curriculum: [
-      { week: 'Week 1: Wrangling', topics: ['Advanced Excel', 'SQL Query Optimization'] },
-      { week: 'Week 2-8: Visualization', topics: ['Tableau Dashboarding', 'Business Intelligence Storytelling'] },
+      { week: 'Data Collection & Cleaning', topics: ['Advanced Excel (Pivot Tables, Power Query)', 'SQL Fundamentals & Query Optimization', 'Data Cleaning & Transformation', 'ETL Processes & Data Pipelines'] },
+      { week: 'Statistical Analysis', topics: ['Descriptive Statistics & Data Profiling', 'Correlation & Regression Analysis', 'Time Series Analysis', 'Statistical Modeling for Business'] },
+      { week: 'Data Visualization', topics: ['Tableau Desktop & Server', 'Power BI (DAX, Power Query)', 'Dashboard Design Best Practices', 'Interactive Visualizations & Storytelling'] },
+      { week: 'Business Intelligence', topics: ['KPI Development & Metrics', 'Business Analytics Frameworks', 'Predictive Analytics for Business', 'Data-Driven Decision Making & Reporting'] },
     ]
   },
   {
@@ -109,8 +115,10 @@ const coreCourses: Course[] = [
     desc: 'Design beautiful, user-centric digital experiences.',
     details: 'Master the entire design process, from user research and wireframing to high-fidelity prototyping using Figma.',
     curriculum: [
-      { week: 'Week 1: UX Principles', topics: ['User Research', 'Empathy Mapping', 'Information Architecture'] },
-      { week: 'Week 2-8: Interface Design', topics: ['Visual Hierarchy', 'Typography & Color Systems', 'Prototyping in Figma'] },
+      { week: 'UX Research & Strategy', topics: ['User Research Methods (Interviews, Surveys)', 'Persona Development & User Journey Mapping', 'Information Architecture & Card Sorting', 'Competitive Analysis & Heuristic Evaluation'] },
+      { week: 'Wireframing & Prototyping', topics: ['Low-Fidelity Wireframing & Sketching', 'High-Fidelity Mockups in Figma', 'Interactive Prototyping & Microinteractions', 'Usability Testing & Feedback Integration'] },
+      { week: 'Visual Design & Systems', topics: ['Typography & Color Theory', 'Design Systems & Component Libraries', 'Responsive & Adaptive Design', 'Accessibility (WCAG) & Inclusive Design'] },
+      { week: 'Professional Practice', topics: ['Design Handoff & Developer Collaboration', 'Design Tools (Figma, Adobe XD, Sketch)', 'Portfolio Development & Case Studies', 'UI Animation & Motion Design Principles'] },
     ]
   },
   {
@@ -123,8 +131,10 @@ const coreCourses: Course[] = [
     desc: 'Protect digital assets and defend against cyber threats.',
     details: 'Practical ethical hacking and defensive security strategies. Get ready for industry-standard certifications.',
     curriculum: [
-      { week: 'Week 1: Networking', topics: ['TCP/IP Fundamentals', 'Security Protocols'] },
-      { week: 'Week 2-12: Penetration Testing', topics: ['Vulnerability Assessment', 'Ethical Hacking Labs', 'Incident Response'] },
+      { week: 'Networking & Security Fundamentals', topics: ['TCP/IP, OSI Model & Network Protocols', 'Firewalls, IDS/IPS & Network Security', 'Cryptography (Encryption, Hashing, PKI)', 'Security Policies & Compliance (GDPR, HIPAA)'] },
+      { week: 'Ethical Hacking & Penetration Testing', topics: ['Reconnaissance & Information Gathering', 'Vulnerability Scanning (Nmap, Nessus)', 'Exploitation Techniques & Tools (Metasploit)', 'Web Application Security (OWASP Top 10)'] },
+      { week: 'Defensive Security', topics: ['Security Operations Center (SOC) Operations', 'Log Analysis & SIEM (Splunk, ELK)', 'Malware Analysis & Reverse Engineering', 'Threat Intelligence & Threat Hunting'] },
+      { week: 'Incident Response & Forensics', topics: ['Incident Response Framework & Playbooks', 'Digital Forensics & Evidence Collection', 'Security Certifications Prep (CEH, CompTIA Security+)', 'Cloud Security (AWS, Azure Security)'] },
     ]
   },
   {
@@ -137,8 +147,10 @@ const coreCourses: Course[] = [
     desc: 'Architect and manage cloud infrastructure on AWS and Azure.',
     details: 'Master cloud computing. Focus on scalability, security, and cost-optimization in modern environments.',
     curriculum: [
-      { week: 'Week 1: Core Cloud', topics: ['Virtualization', 'Identity & Access Management'] },
-      { week: 'Week 2-10: Architecture', topics: ['Infrastructure as Code (Terraform)', 'Kubernetes Orchestration', 'Serverless Design'] },
+      { week: 'Cloud Fundamentals & AWS/Azure', topics: ['Cloud Computing Concepts & Service Models', 'AWS Core Services (EC2, S3, RDS, Lambda)', 'Azure Fundamentals (VMs, Storage, App Services)', 'IAM, Security Groups & Network Configuration'] },
+      { week: 'Infrastructure as Code & Automation', topics: ['Terraform for Multi-Cloud Infrastructure', 'CloudFormation & ARM Templates', 'Configuration Management (Ansible, Chef)', 'CI/CD Pipelines (GitHub Actions, Jenkins)'] },
+      { week: 'Container & Orchestration', topics: ['Docker Containerization & Best Practices', 'Kubernetes Architecture & Orchestration', 'Helm Charts & Service Mesh', 'Container Security & Registry Management'] },
+      { week: 'Cloud Architecture & Optimization', topics: ['Serverless Architecture (Lambda, Azure Functions)', 'Microservices & API Gateway Design', 'Monitoring & Logging (CloudWatch, Azure Monitor)', 'Cost Optimization & FinOps Practices'] },
     ]
   }
 ];
@@ -154,8 +166,10 @@ const capacityCourses: Course[] = [
     desc: 'Integrate AI into business workflows to maximize ROI and efficiency.',
     details: 'Strategic leadership program for executives and business owners. Learn how to identify AI opportunities and oversee technical implementation.',
     curriculum: [
-      { week: 'Week 1: AI Landscape', topics: ['LLM Fundamentals for Business', 'Market Opportunity Assessment'] },
-      { week: 'Week 2-8: Implementation', topics: ['ROI Modeling', 'AI Governance & Ethics', 'Automation Strategy'] },
+      { week: 'AI Strategy & Business Value', topics: ['AI/ML Fundamentals for Executives', 'Identifying AI Use Cases & Opportunities', 'AI Maturity Assessment & Roadmapping', 'Competitive Analysis & Market Positioning'] },
+      { week: 'Implementation & Integration', topics: ['LLMs & Generative AI Applications', 'AI Solution Architecture & Vendor Selection', 'Data Strategy & Infrastructure Requirements', 'Change Management & Team Enablement'] },
+      { week: 'AI Operations & Governance', topics: ['AI Ethics, Bias & Responsible AI', 'Regulatory Compliance & Risk Management', 'ROI Modeling & Business Case Development', 'Performance Metrics & KPIs for AI'] },
+      { week: 'Scaling AI Initiatives', topics: ['Process Automation & Workflow Optimization', 'Customer Experience Enhancement with AI', 'AI-Driven Decision Making Frameworks', 'Building AI-First Organizations'] },
     ]
   },
   {
@@ -168,8 +182,10 @@ const capacityCourses: Course[] = [
     desc: 'Empower non-technical teams to build internal tools and MVPs rapidly.',
     details: 'Rapid prototyping for non-developers. Master tools like Bubble, FlutterFlow, and Zapier to build production-grade tools without code.',
     curriculum: [
-      { week: 'Week 1: Fundamentals', topics: ['Database Design for No-Code', 'Logic & Workflow Thinking'] },
-      { week: 'Week 2-6: Tooling', topics: ['Bubble.io Mastery', 'Automation with Make/Zapier', 'MVP Launch'] },
+      { week: 'No-Code Foundations', topics: ['No-Code/Low-Code Platform Landscape', 'Database Design & Data Modeling Basics', 'User Flow Design & Wireframing', 'API Concepts & Integration Fundamentals'] },
+      { week: 'Visual Development Platforms', topics: ['Bubble.io (UI Builder, Workflows, Database)', 'Webflow (CMS, Interactions, E-commerce)', 'FlutterFlow (Mobile App Development)', 'Adalo & Glide for Rapid Prototyping'] },
+      { week: 'Automation & Integration', topics: ['Zapier & Make (Integromat) Automations', 'Airtable as Backend & Database', 'API Connectors & Webhooks', 'Multi-Tool Integration Strategies'] },
+      { week: 'Advanced Features & Launch', topics: ['User Authentication & Permissions', 'Payment Integration (Stripe, PayPal)', 'SEO & Performance Optimization', 'MVP Launch, Testing & Iteration'] },
     ]
   },
   {
@@ -182,8 +198,10 @@ const capacityCourses: Course[] = [
     desc: 'The future of rapid prototyping using natural language and AI agents.',
     details: 'Learn the cutting-edge art of "Vibe Coding"—using cursor, bolt.new, and natural language prompts to build enterprise-scale products at 10x speed.',
     curriculum: [
-      { week: 'Week 1: AI Prompting', topics: ['System Instructions for Builders', 'Decomposition of Features'] },
-      { week: 'Week 2-4: Rapid Build', topics: ['Cursor IDE Mastery', 'Deployment with Vercel/Netlify', 'AI-Driven Debugging'] },
+      { week: 'AI-Assisted Development Fundamentals', topics: ['Prompt Engineering for Code Generation', 'AI Coding Tools Landscape (Cursor, Copilot, v0)', 'Natural Language to Code Translation', 'Effective Communication with AI Agents'] },
+      { week: 'Rapid Prototyping with AI', topics: ['Cursor IDE & AI Pair Programming', 'Bolt.new & Instant Full-Stack Apps', 'ChatGPT/Claude for Architecture Design', 'Component Generation & UI Creation'] },
+      { week: 'Production-Ready Development', topics: ['Code Review & Quality with AI', 'Debugging & Error Resolution Strategies', 'Testing & Documentation Generation', 'Refactoring & Optimization Techniques'] },
+      { week: 'Deployment & Scaling', topics: ['Rapid Deployment (Vercel, Netlify, Railway)', 'Database Setup & Management with AI', 'API Integration & Backend Services', 'Iterative Development & Continuous Improvement'] },
     ]
   }
 ];
@@ -569,9 +587,24 @@ const Academy: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: 'Sarah Jenkins', role: 'Frontend Engineer @ Google', text: 'Xydge Academy transformed my career path. The mentorship I received was unparalleled.', image: 'https://i.pravatar.cc/150?u=sarah' },
-              { name: 'Michael Chen', role: 'Data Scientist @ Meta', text: 'The intensive Data Science program gave me practical skills my degree didn\'t.', image: 'https://i.pravatar.cc/150?u=michael' },
-              { name: 'Amara Okafor', role: 'Cybersecurity Analyst', text: 'The focus on hands-on labs was a game changer. Xydge teaches you how to think.', image: 'https://i.pravatar.cc/150?u=amara' }
+              {
+                name: 'Chiamaka Okoro',
+                role: 'Cybersecurity Student',
+                text: 'The labs felt real, not just theory. I can now walk through a full security workflow with confidence.',
+                image: 'https://ui-avatars.com/api/?name=Chiamaka+Okoro&background=0B1320&color=FFFFFF'
+              },
+              {
+                name: 'Oluwadamilola Adeyemi',
+                role: 'Data Science Student',
+                text: 'I went from struggling with Python to building models I can explain. The support made the difference.',
+                image: 'https://ui-avatars.com/api/?name=Oluwadamilola+Adeyemi&background=0B1320&color=FFFFFF'
+              },
+              {
+                name: 'Khalid Ibrahim',
+                role: 'Frontend Student',
+                text: 'The projects forced me to think like a real product engineer. My portfolio looks professional now.',
+                image: 'https://ui-avatars.com/api/?name=Hauwa+Ibrahim&background=0B1320&color=FFFFFF'
+              }
             ].map((t, i) => (
               <div key={i} className="glass-card p-10 rounded-[3rem] border-white/5 relative flex flex-col justify-between h-full group hover:border-blue-500/20 transition-all">
                 <Quote className="absolute top-8 right-8 text-blue-500/10" size={60} />

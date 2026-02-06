@@ -11,7 +11,7 @@ const mockData: Record<string, any> = {
   'kulture-market': {
     title: 'Kulture Market',
     tagline: 'Modernizing multi-vendor commerce for a global audience.',
-    img: '../components/assets/component1.png',
+    img: '/assets/component1.png',
     stats: [
       { label: 'Countries Reach', value: '2+', icon: <Globe size={18} /> },
       { label: 'Active Sellers', value: '2k+', icon: <Users size={18} /> },

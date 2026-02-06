@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
                 {[
                   { icon: <Mail className="text-blue-400" />, label: "Email", value: "hello@xydge.com", sub: "Typically replies within 4 hours" },
                   { icon: <Phone className="text-emerald-400" />, label: "Phone", value: "+234 808 332 3258", sub: "Mon-Fri from 9am to 6pm" },
-                  { icon: <MapPin className="text-rose-400" />, label: "Address", value: "Digital Square, Victoria Island", sub: "Lagos, Nigeria" }
+                  { icon: <MapPin className="text-rose-400" />, label: "Address", value: "FCT Abuja", sub: "Nigeria" }
                 ].map((item, i) => (
                   <div key={i} className="flex items-start space-x-6 group">
                     <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-white/10 transition-colors">
