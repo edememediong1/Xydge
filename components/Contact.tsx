@@ -49,8 +49,8 @@ const Contact: React.FC = () => {
 
               <div className="space-y-8">
                 {[
-                  { icon: <Mail className="text-blue-400" />, label: "Email", value: "hello@xydge.com", sub: "Typically replies within 4 hours" },
-                  { icon: <Phone className="text-emerald-400" />, label: "Phone", value: "+234 808 332 3258", sub: "Mon-Fri from 9am to 6pm" },
+                  { icon: <Mail className="text-blue-400" />, label: "Email", value: "hello@xydge.com", sub: "Typically replies within minutes" },
+                  { icon: <Phone className="text-emerald-400" />, label: "Phone", value: "+234 808 332 3258", sub: "Mon-Sat (24 hours support)" },
                   { icon: <MapPin className="text-rose-400" />, label: "Address", value: "FCT Abuja", sub: "Nigeria" }
                 ].map((item, i) => (
                   <div key={i} className="flex items-start space-x-6 group">
