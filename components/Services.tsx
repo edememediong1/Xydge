@@ -14,9 +14,10 @@ import {
 
 interface ServicesProps {
   onNavigateAcademy?: () => void;
+  onNavigatePortfolio?: () => void;
 }
 
-const Services: React.FC<ServicesProps> = ({ onNavigateAcademy }) => {
+const Services: React.FC<ServicesProps> = ({ onNavigateAcademy, onNavigatePortfolio }) => {
   const trainingPrograms = [
     { name: 'Web Development', icon: <Code size={18} /> },
     { name: 'Mobile Development', icon: <Smartphone size={18} /> },
@@ -63,7 +64,10 @@ const Services: React.FC<ServicesProps> = ({ onNavigateAcademy }) => {
               </ul>
             </div>
 
-            <button className="flex items-center space-x-2 text-blue-400 font-bold group-hover:text-blue-300 transition-colors mt-auto">
+            <button 
+              onClick={onNavigatePortfolio}
+              className="flex items-center space-x-2 text-blue-400 font-bold group-hover:text-blue-300 transition-colors mt-auto"
+            >
               <span>View Our Portfolio</span>
               <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </button>

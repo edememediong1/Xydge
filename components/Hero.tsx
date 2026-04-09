@@ -195,9 +195,14 @@ const Hero: React.FC<HeroProps> = ({ onNavigateAcademy }) => {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-5 sm:space-y-0 sm:space-x-8 mb-32">
-          <button className="w-full sm:w-auto px-12 py-6 bg-blue-600 hover:bg-blue-500 text-white rounded-[1.5rem] font-bold text-lg transition-all shadow-[0_20px_50px_rgba(37,99,235,0.3)] transform hover:-translate-y-2 active:scale-95">
+          <a 
+            href="https://wa.me/2347047258156"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block text-center w-full sm:w-auto px-12 py-6 bg-blue-600 hover:bg-blue-500 text-white rounded-[1.5rem] font-bold text-lg transition-all shadow-[0_20px_50px_rgba(37,99,235,0.3)] transform hover:-translate-y-2 active:scale-95"
+          >
             Start a Project
-          </button>
+          </a>
           <button
             onClick={onNavigateAcademy}
             className="w-full sm:w-auto px-12 py-6 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-[1.5rem] font-bold text-lg transition-all backdrop-blur-xl transform hover:-translate-y-1.5 active:scale-95"

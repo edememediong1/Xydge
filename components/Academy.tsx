@@ -320,7 +320,7 @@ const EnrollModal: React.FC<{ isOpen: boolean; onClose: () => void; onOpenForm: 
 
           <div className="space-y-4">
             <button
-              onClick={() => window.open('https://wa.me/2348083323258', '_blank')}
+              onClick={() => window.open('https://wa.me/2347047258156', '_blank')}
               className="w-full flex items-center justify-between p-6 rounded-2xl bg-blue-600 hover:bg-blue-500 transition-all group shadow-xl shadow-blue-900/20"
             >
               <div className="flex items-center space-x-4">
@@ -334,17 +334,17 @@ const EnrollModal: React.FC<{ isOpen: boolean; onClose: () => void; onOpenForm: 
             </button>
 
             <button
-              onClick={onOpenForm}
-              className="w-full flex items-center justify-between p-6 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition-all group"
+              disabled
+              className="w-full flex items-center justify-between p-6 rounded-2xl bg-white/5 border border-white/10 opacity-50 cursor-not-allowed group"
             >
               <div className="flex items-center space-x-4">
-                <ClipboardList size={24} className="text-blue-400" />
+                <ClipboardList size={24} className="text-gray-500" />
                 <div className="text-left">
-                  <p className="font-bold text-white">Fill Admissions Form</p>
-                  <p className="text-xs text-gray-500">Provide your details for a callback</p>
+                  <p className="font-bold text-gray-400">Fill Admissions Form</p>
+                  <p className="text-xs text-gray-600">Temporarily unavailable</p>
                 </div>
               </div>
-              <ArrowRight className="text-gray-600 group-hover:text-white transition-colors" size={20} />
+              <ArrowRight className="text-gray-700" size={20} />
             </button>
           </div>
 
@@ -435,7 +435,7 @@ const Academy: React.FC = () => {
 
               <div className="pt-6 border-t border-white/10">
                 <button
-                  onClick={() => setIsEnrollModalOpen(true)}
+                  onClick={() => window.open('https://wa.me/2347047258156', '_blank')}
                   className="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg active:scale-95 mb-4"
                 >
                   Enroll Now
@@ -454,13 +454,28 @@ const Academy: React.FC = () => {
       <EnrollModal isOpen={isEnrollModalOpen} onClose={() => setIsEnrollModalOpen(false)} onOpenForm={openForm} />
       <AdmissionsFormModal isOpen={isAdmissionsFormOpen} onClose={() => setIsAdmissionsFormOpen(false)} />
 
-      {/* 1. Starry Solar System Hero */}
-      <section className="relative pt-60 pb-32 px-6 overflow-hidden flex flex-col items-center min-h-[85vh] justify-center text-center">
-        <SolarSystemBackground />
+      {/* 1. Cinematic Video Hero */}
+      <section className="relative pt-60 pb-32 px-6 flex flex-col items-center min-h-[85vh] justify-center text-center">
+        {/* Background Video & Overlays */}
+        <div className="absolute inset-0 w-full h-full -z-20 overflow-hidden">
+          <video
+            src="/assets/academy.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-60 scale-105"
+          ></video>
+          {/* Top & radial darkening for text readability */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#010409_100%)] opacity-80"></div>
+          {/* Smooth bottom fade blending seamlessly into the next section */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#010409] via-[#010409]/50 to-[#010409]/20"></div>
+        </div>
+
         <div className="max-w-5xl mx-auto relative z-10">
-          <span className="text-[10px] font-black tracking-[0.4em] text-blue-500 uppercase mb-8 block">The Future of Tech Education</span>
-          <h1 className="text-4xl md:text-7xl lg:text-8xl font-extrabold mb-12 tracking-tighter leading-none text-white">Xydge Academy</h1>
-          <p className="text-xl md:text-3xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
+          <span className="text-[10px] font-black tracking-[0.4em] text-blue-500 uppercase mb-8 block drop-shadow-md">The Future of Tech Education</span>
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-extrabold mb-12 tracking-tighter leading-none text-white drop-shadow-2xl">Xydge Academy</h1>
+          <p className="text-xl md:text-3xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-lg">
             High-performance engineering immersion designed to turn ambitious builders into industry-leading software experts.
           </p>
         </div>
@@ -674,7 +689,7 @@ const Academy: React.FC = () => {
           <h2 className="text-3xl md:text-6xl font-extrabold mb-12 tracking-tighter leading-tight">Your Digital Mastery <br />Starts Here.</h2>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <button
-              onClick={() => setIsEnrollModalOpen(true)}
+              onClick={() => window.open('https://wa.me/2347047258156', '_blank')}
               className="px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white font-black text-lg rounded-2xl shadow-2xl active:scale-95 transition-all flex items-center justify-center"
             >
               Enroll for Cohort 2025 <ArrowRight className="ml-3" size={20} />

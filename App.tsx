@@ -25,7 +25,7 @@ const HomePage: React.FC<{
   <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
     <Hero onNavigateAcademy={onNavigateAcademy} />
     <TrustedBy />
-    <Services onNavigateAcademy={onNavigateAcademy} />
+    <Services onNavigateAcademy={onNavigateAcademy} onNavigatePortfolio={onNavigatePortfolio} />
     <WhyChooseUs />
     <FeaturedWork onNavigatePortfolio={onNavigatePortfolio} onSelectCase={onSelectCase} />
     <TestimonialsHome />
