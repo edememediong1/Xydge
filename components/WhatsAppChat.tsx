@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { MessageCircle, X, ChevronRight, Headphones, Code, GraduationCap, HelpCircle } from 'lucide-react';
 
 const channels = [
-  { name: 'General Support', icon: <Headphones size={18} />, number: '2348000000001', color: 'text-blue-400' },
-  { name: 'Software & Services', icon: <Code size={18} />, number: '2348000000002', color: 'text-purple-400' },
-  { name: 'Training & Academy', icon: <GraduationCap size={18} />, number: '2348000000003', color: 'text-emerald-400' },
-  { name: 'Help', icon: <HelpCircle size={18} />, number: '2348000000004', color: 'text-rose-400' },
+  { name: 'General Support', icon: <Headphones size={18} />, number: '2347047258156', color: 'text-blue-400' },
+  { name: 'Software & Services', icon: <Code size={18} />, number: '2347047258156', color: 'text-purple-400' },
+  { name: 'Training & Academy', icon: <GraduationCap size={18} />, number: '2347047258156', color: 'text-emerald-400' },
+  { name: 'Help', icon: <HelpCircle size={18} />, number: '2347047258156', color: 'text-rose-400' },
 ];
 
 const WhatsAppChat: React.FC = () => {

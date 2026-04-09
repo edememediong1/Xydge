@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Instagram, Twitter, Linkedin } from 'lucide-react';
+import { SiInstagram, SiX} from 'react-icons/si';
+import { FaLinkedin } from 'react-icons/fa6';
 
 const Footer: React.FC = () => {
   return (
@@ -21,21 +22,21 @@ const Footer: React.FC = () => {
               <a href="#" className="hover:text-white transition-colors">Terms and Conditions</a>
             </div>
             <div className="flex items-center space-x-4">
-              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram size={18} />
+              <a href="https://www.instagram.com/xydgesoftwaresolutions/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-white transition-colors">
+                <SiInstagram size={18} />
               </a>
-              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter size={18} />
+              <a href="https://x.com/xydgesoftware" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-gray-400 hover:text-white transition-colors">
+                <SiX size={18} />
               </a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin size={18} />
+              <a href="https://www.linkedin.com/company/xydge-software-solutions" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-400 hover:text-white transition-colors">
+                <FaLinkedin size={18} />
               </a>
             </div>
           </div>
 
           {/* Copyright */}
           <div className="text-sm text-gray-600">
-            © 2026 Xydge, All Rights Reserved
+            © {new Date().getFullYear()} Xydge, All Rights Reserved
           </div>
         </div>
       </div>
