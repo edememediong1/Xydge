@@ -128,7 +128,10 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ caseId, onBack }) => 
         <section className="py-32 px-6 text-center border-t border-white/5 relative">
           <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] pointer-events-none text-[15vw] font-black">LEGACY</div>
           <h2 className="text-4xl md:text-5xl font-extrabold mb-10 tracking-tight leading-tight">Build Something <br className="hidden md:block" /> Similar With Us</h2>
-          <button className="px-4 md:px-12 py-6 bg-blue-600 hover:bg-blue-500 text-white font-black md:text-xl rounded-2xl transition-all shadow-2xl active:scale-95 flex items-center mx-auto">
+          <button 
+            onClick={() => window.open('https://wa.me/2347047258156', '_blank')}
+            className="px-4 md:px-12 py-6 bg-blue-600 hover:bg-blue-500 text-white font-black md:text-xl rounded-2xl transition-all shadow-2xl active:scale-95 flex items-center mx-auto"
+          >
             <MessageSquare className="mr-1" />Contact Engineering Team
           </button>
         </section>

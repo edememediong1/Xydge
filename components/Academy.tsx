@@ -692,7 +692,7 @@ const Academy: React.FC = () => {
               onClick={() => window.open('https://wa.me/2347047258156', '_blank')}
               className="px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white font-black text-lg rounded-2xl shadow-2xl active:scale-95 transition-all flex items-center justify-center"
             >
-              Enroll for Cohort 2025 <ArrowRight className="ml-3" size={20} />
+              Enroll in the upcoming cohort <ArrowRight className="ml-3" size={20} />
             </button>
             <button className="px-10 py-5 glass-card hover:bg-white/5 border-white/10 text-white font-bold text-lg rounded-2xl active:scale-95 transition-all flex items-center justify-center">
               Download Prospectus
