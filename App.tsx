@@ -10,12 +10,13 @@ import FeaturedWork from './components/FeaturedWork';
 import TestimonialsHome from './components/TestimonialsHome';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
-import Academy from './components/Academy';
 import Portfolio from './components/Portfolio';
 import Company from './components/Company';
 import Contact from './components/Contact';
 import CaseStudyDetail from './components/CaseStudyDetail';
 import WhatsAppChat from './components/WhatsAppChat';
+
+const ACADEMY_URL = 'https://www.xydgeacademy.com';
 
 const HomePage: React.FC<{
   onNavigateAcademy: () => void;
@@ -48,6 +49,14 @@ const CaseStudyRoute: React.FC = () => {
   );
 };
 
+const ExternalRedirect: React.FC<{ to: string }> = ({ to }) => {
+  useEffect(() => {
+    window.location.replace(to);
+  }, [to]);
+
+  return null;
+};
+
 const App: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -76,7 +85,7 @@ const App: React.FC = () => {
             path="/"
             element={
               <HomePage
-                onNavigateAcademy={() => navigate('/academy')}
+                onNavigateAcademy={() => window.open(ACADEMY_URL, '_blank', 'noopener,noreferrer')}
                 onNavigatePortfolio={() => navigate('/portfolio')}
                 onSelectCase={handleNavigateToCase}
               />
@@ -84,11 +93,7 @@ const App: React.FC = () => {
           />
           <Route
             path="/academy"
-            element={
-              <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <Academy />
-              </div>
-            }
+            element={<ExternalRedirect to={ACADEMY_URL} />}
           />
           <Route
             path="/portfolio"

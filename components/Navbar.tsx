@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
+const ACADEMY_URL = 'https://www.xydgeacademy.com';
+
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,12 +23,14 @@ const Navbar: React.FC = () => {
     { name: 'What We Do', id: 'what-we-do', route: '/', scrollId: 'what-we-do' },
     { name: 'Portfolio', id: 'portfolio', route: '/portfolio' },
     { name: 'Company', id: 'company', route: '/company' },
-    { name: 'Academy', id: 'academy', route: '/academy' },
+    { name: 'Academy', id: 'academy', externalUrl: ACADEMY_URL },
     { name: 'Contacts', id: 'contact', route: '/contact' }
   ];
 
   const handleNavClick = (item: typeof navItems[0]) => {
-    if (item.scrollId) {
+    if ('externalUrl' in item && item.externalUrl) {
+      window.open(item.externalUrl, '_blank', 'noopener,noreferrer');
+    } else if (item.scrollId) {
       if (location.pathname !== '/') {
         navigate('/');
         setTimeout(() => {
@@ -37,7 +41,7 @@ const Navbar: React.FC = () => {
         const element = document.getElementById(item.scrollId as string);
         element?.scrollIntoView({ behavior: 'smooth' });
       }
-    } else if (item.route) {
+    } else if ('route' in item && item.route) {
       navigate(item.route);
     }
     setIsMobileMenuOpen(false);
